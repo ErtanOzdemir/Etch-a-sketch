@@ -5,8 +5,8 @@ let numberOfBoxesInContainer;
 
 
 function resetSketchPad() {
-    let box = document.getElementsByClassName('box');
-    while (box.length > 0) box[0].remove();
+    let boxes = document.getElementsByClassName('boxes');
+    while (boxes.length > 0) boxes[0].remove();
 }
 
 function drawSketchPadWithSize(n) {
@@ -24,7 +24,7 @@ function drawSketchPadWithSize(n) {
         div.style.border = 'solid';
         div.style.borderColor = 'black';
         div.style.borderWidth = 'thin'
-        div.setAttribute('class', 'box');
+        div.setAttribute('class', 'boxes');
         div.addEventListener("mouseover", paint);
         container.appendChild(div);
 
